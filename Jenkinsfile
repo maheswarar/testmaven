@@ -25,8 +25,7 @@ pipeline {
     stage('checkov scan'){
         steps{
              container('checkov'){
-sh '''path = $(pwd)
-checkov --directory $path'''
+sh 'checkov --directory "home/jenkins/agent/workspace/jenkinsfile_main"'
     }
         }
     }
