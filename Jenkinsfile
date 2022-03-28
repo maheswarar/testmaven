@@ -25,7 +25,7 @@ pipeline {
     stage('checkov scan'){
         steps{
              container('checkov'){
-sh 'checkov --directory "/home/jenkins/agent/workspace/checkov-pipeline"'
+sh 'checkov --directory "/home/jenkins/agent/workspace/jenkinsfile"'
     }
         }
     }
