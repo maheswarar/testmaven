@@ -15,18 +15,10 @@ pipeline {
     }
   }
   stages {
-    stage('Git clone') {
-      steps {
-          container('checkov'){
-        git branch: 'main', url: 'https://github.com/maheswarar/testmaven.git'
-        }
-      }
-      }
     stage('checkov scan'){
         steps{
              container('checkov'){
-sh '''ls
-pwd'''
+sh 'checkov --directory "/home/jenkins/agent/workspace/jenkinsfile_main"'
     }
         }
     }
