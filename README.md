@@ -1,17 +1,21 @@
-az acr repository show-manifests --name myRegistry --repository myRepo --query "[?tags==null].[digest]" --output tsv
 
-az acr repository delete --name myRegistry --repository myRepo --manifest sha256:<digest>
+Communication:
+Received positive feedback from peers about my engagement in meetings.
+Successfully improved active listening skills, leading to better team collaboration.
+Created a supportive feedback culture that contributed to individual and team development
 
-# Variables
-ACR_NAME=<your-acr-name>
-REPOSITORY_NAME=<your-repository-name>
+continuous innovation:
 
-# Get the list of tags, keeping only the ones to delete
-tags_to_delete=$(az acr repository show-tags --name $ACR_NAME --repository $REPOSITORY_NAME --orderby time_desc --query "[].{tag: name}" -o tsv | tail -n +6)
+Successfully streamlined processes, leading to measurable improvements in efficiency.
+Continue exploring innovative technologies and practices to enhance productivity and service quality.
 
-# Delete the tags and manifests
-for tag in $tags_to_delete; do
-    echo "Deleting tag: $tag"
-    az acr repository delete --name $ACR_NAME --repository $REPOSITORY_NAME --tag $tag --yes --force
-done
+knowleg:
 
+Strengthened collaboration across departments, resulting in more integrated project outcomes.
+Continue promoting knowledge sharing and collaboration, exploring new methods to engage and connect team members.
+
+
+last:
+
+Successfully aligned team projects and leading to measurable improvements in performance
+Continue to contribute to thought leadership by exploring emerging trends and sharing insights with the team.
